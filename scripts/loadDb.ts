@@ -26,7 +26,9 @@ const f1Data = [
 ];
 
 const client = new DataAPIClient(process.env.ASTRA_DB_APPLICATION_TOKEN);
-const db = client.db(process.env.ASTRA_DB_ENDPOINT);
+const db = client.db(process.env.ASTRA_DB_ENDPOINT, {
+  namespace: process.env.ASTRA_DB_NAMESPACE,
+});
 
 const splitter = new RecursiveCharacterTextSplitter({
   chunkSize: 512,
