@@ -54,9 +54,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [F1-GPT] <a name="about-project"></a>
+# 📖 **F1-GPT** <a name="about-project"></a>
 
-**[F1-GPT]** is a retrieval-augmented chatbot about Formula One Racing Championships. It utilizes OpenAI's GPT-4 model and real-time web scraping to provide up-to-date information using Retrieval Augmented Generation (RAG).
+**F1-GPT** is a retrieval-augmented chatbot about Formula One Racing Championships. It utilizes OpenAI's GPT-4 model and real-time web scraping to provide up-to-date information using Retrieval Augmented Generation (RAG).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -153,8 +153,6 @@ Example command:
 
 -
 
-Do not forget to update the Ruby version in the GemFile and .ruby-version files of the Project if having conflict with your local version.
-
 ### Usage
 
 To run the project, execute the following command:
@@ -191,14 +189,6 @@ Sign up on [DataStax](https://www.datastax.com/), and set up a new serverless da
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- Api Endpoints
-- Upload Pics with Carrierwave
-- NavBar having UserLogo w/ Gravtastic
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -229,9 +219,9 @@ I would like to thank every one whose code was used in this application.
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[Does this chatbot renders up to date information about a particular subject?]**
+- **Does this chatbot renders up to date information about a particular subject?**
 
-  - [Yes, this chatbot answers up to date information about a particular subject.]
+  - Yes, this chatbot answers up to date information about a particular subject.
 
 - **How does this app deliver up-to-date information about a subject when the LLM model being used has a specific cutoff date?**
 
