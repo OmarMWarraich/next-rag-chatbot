@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
-import { MarkdownRenderer } from "@/components/ui/markdown-renderer"
+import { cn } from "@/lib/utils";
+import { MarkdownRenderer } from "@/components/ui/markdown-renderer";
 
 const chatBubbleVariants = cva(
   "group/message relative break-words rounded-lg p-3 text-sm sm:max-w-[70%]",
@@ -44,22 +44,22 @@ const chatBubbleVariants = cva(
       },
     ],
   }
-)
+);
 
-type Animation = VariantProps<typeof chatBubbleVariants>["animation"]
+type Animation = VariantProps<typeof chatBubbleVariants>["animation"];
 
 export interface Message {
-  id: string
-  role: "user" | "assistant" | (string & {})
-  content: string
-  createdAt?: Date
-  attachments?: File[]
+  id: string;
+  role: "user" | "assistant" | (string & {});
+  content: string;
+  createdAt?: Date;
+  attachments?: File[];
 }
 
 export interface ChatMessageProps extends Message {
-  showTimeStamp?: boolean
-  animation?: Animation
-  actions?: React.ReactNode
+  showTimeStamp?: boolean;
+  animation?: Animation;
+  actions?: React.ReactNode;
 }
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
@@ -70,12 +70,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   animation = "scale",
   actions,
 }) => {
-  const isUser = role === "user"
+  const isUser = role === "user";
 
-  const formattedTime = createdAt?.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-  })
+  const formattedTime = createdAt
+    ? new Date(createdAt).toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : undefined;
 
   return (
     <div className={cn("flex flex-col", isUser ? "items-end" : "items-start")}>
@@ -102,5 +104,5 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         </span>
       ) : null}
     </div>
-  )
-}
+  );
+};

@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^1.0.4",
+    "@ai-sdk/react": "^1.0.2",
     "@datastax/astra-db-ts": "^1.5.0",
     "@radix-ui/react-slot": "^1.1.0",
     "ai": "^4.0.3",
